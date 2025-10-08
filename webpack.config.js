@@ -1,3 +1,5 @@
+const htmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   entry: "./src/js/index.js",
   output: {
@@ -15,4 +17,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new htmlWebpackPlugin({
+      // テンプレートになるHTMLファイルを指定
+      template: "./src/index.html",
+    }),
+  ],
 };
