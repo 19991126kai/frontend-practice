@@ -1,4 +1,5 @@
 import { data, registerNewTodo, appendTodoListElem } from "./todo";
+import "../css/style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   const registerButtonElem = document.getElementById("register");

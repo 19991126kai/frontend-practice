@@ -6,4 +6,13 @@ module.exports = {
   },
   mode: "development",
   devtool: "source-map",
+  module: {
+    rules: [
+      {
+        // 拡張子 css のファイル（正規表現）
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };
