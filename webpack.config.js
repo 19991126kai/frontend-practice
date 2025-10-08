@@ -8,6 +8,11 @@ module.exports = {
     filename: "bundle.js",
   },
   mode: "development",
+  devServer: {
+    static: {
+      directory: "./dist",
+    },
+  },
   devtool: "source-map",
   module: {
     rules: [

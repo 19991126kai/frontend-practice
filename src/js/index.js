@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     appendTodoListElem();
   });
 
+  console.log("Hello, World!");
+  console.log("Hello, World2!");
+  console.log("Hello, World3!");
+
   // 絞り込みに入力された場合のイベント定義
   const filterInputElem = document.getElementById("filter");
   filterInputElem.addEventListener("input", () => {
