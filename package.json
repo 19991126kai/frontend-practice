@@ -2,20 +2,23 @@
   "name": "todo",
   "version": "1.0.0",
   "description": "TODOアプリ",
-  "type": "module",
   "main": "js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint js",
     "lint:fix": "eslint js --fix",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development"
   },
   "author": "nakanishi-kaito",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "9.37.0",
     "eslint": "9.37.0",
-    "prettier": "3.6.2"
+    "prettier": "3.6.2",
+    "webpack": "5.102.1",
+    "webpack-cli": "6.0.1"
   }
 }

@@ -1,4 +1,4 @@
-const data = {
+export const data = {
   todoList: [],
   filterWord: "",
 };
@@ -36,7 +36,8 @@ export const appendTodoListElem = () => {
   data.todoList
     .filter(
       (todo) =>
-        todo.todoName.includes(data.filterWord) || todo.person.includes(data.filterWord),
+        todo.todoName.includes(data.filterWord) ||
+        todo.person.includes(data.filterWord),
     )
     .forEach((todo) => {
       // todoNameのtd要素を生成
