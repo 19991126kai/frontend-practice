@@ -21,6 +21,20 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: "babel-loader", // Babelを利用する
+            options: {
+              // Babel のオプションを指定する
+              presets: [
+                "@babel/preset-env", // プリセットを指定することで、新しいESをES5に変換
+              ],
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -30,4 +44,5 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
   ],
+  target: ["web", "es5"], //ES5(IE11等)向けの設定
 };
