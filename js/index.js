@@ -34,7 +34,7 @@ const appendTodoListElem = () => {
   todoList
     .filter(
       (todo) =>
-        todo.todoName.includes(filterWord) || todo.person.includes(filterWord)
+        todo.todoName.includes(filterWord) || todo.person.includes(filterWord),
     )
     .forEach((todo) => {
       // todoNameのtd要素を生成
