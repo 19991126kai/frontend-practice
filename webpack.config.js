@@ -1,4 +1,5 @@
-const htmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/js/index.js",
@@ -13,14 +14,15 @@ module.exports = {
       {
         // 拡張子 css のファイル（正規表現）
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
   plugins: [
-    new htmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       // テンプレートになるHTMLファイルを指定
       template: "./src/index.html",
     }),
+    new MiniCssExtractPlugin(),
   ],
 };
